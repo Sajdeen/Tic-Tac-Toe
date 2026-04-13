@@ -5,21 +5,45 @@
 
 
 .container{
-   height: 10vh;
-width: 200px;
-position: absolute;
-align-items: center;
-justify-content: center;  
+  height: 1000px;
+width: 2000px;
+display: flex;
+flex-direction: column;
+
+background-color: darkviolet; 
+
+}
+h1{
+    font-size: 50px;
+    color: antiquewhite;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top:  2%; 
 }
 .game{
-    height: 10vh;
-width: 200px;
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+  
 position: absolute;
-align-items: center;
+top: 20%;
+left: 44%;
 justify-content: center;
 } 
 .box{
-    height: 3rem;
-    width: 3rem;
+    height: 7rem;
+    width: 7rem;
     align-items: center;
+    border-radius: 35px;
+    color: azure;
+    background-color: chocolate;
+}
+.reset{
+    height: 4rem;
+    width: 12rem;
+    background-color:green ;
+    position: relative;
+   top:10%;
+   border-radius: 2px;
+    margin: auto;
+
 }
