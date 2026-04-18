@@ -10,7 +10,7 @@ width: 2000px;
 display: flex;
 flex-direction: column;
 
-background-color: darkviolet; 
+background-color: rgb(165, 85, 199); 
 
 }
 h1{
@@ -19,6 +19,7 @@ h1{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin-top:  2%; 
+    user-select: none;
 }
 .game{
    display: grid;
@@ -36,6 +37,10 @@ justify-content: center;
     border-radius: 35px;
     color: azure;
     background-color: chocolate;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size:25px;
+    border: 2px solid rgb(103, 88, 88);
 }
 .reset{
     height: 4rem;
@@ -43,7 +48,44 @@ justify-content: center;
     background-color:green ;
     position: relative;
    top:10%;
-   border-radius: 2px;
+   font-size: 25px;
+   border-radius: 20px;
+  font-size: 25px;
     margin: auto;
-
+color: azure;
+user-select: none;
+border: none;
 }
+
+.msg-container{
+text-align: center;
+justify-content: center;
+margin:  2px;
+}
+
+#new{
+  height: 4rem;
+    width: 12rem;
+    background-color:green ;
+    font-size: 25px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+   top:10%;
+   color: white;
+   border-radius: 2px;
+    margin: auto;  
+    border-radius: 20%;
+border: none;
+cursor: pointer;
+}
+p{
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    color: rgb(222, 73, 19);
+}
+
+.hide{
+    display: none;
+}
+

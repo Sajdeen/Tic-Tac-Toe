@@ -1,5 +1,9 @@
 let boxes = document.querySelectorAll(".box");
-let btn= document.querySelector(".reset");
+let resetbtn = document.querySelector(".reset");
+let newbtn = document.querySelector("#new");
+let msgContainer = document.querySelector(".msg-container");
+let msg = document.querySelector("#msg");
+
 
 let turn0 = true;
  const winningPatterns = [[0,1,2],
@@ -13,6 +17,19 @@ let turn0 = true;
                 
 ];
 
+const reset =()=>{
+   turn0=true;
+enableBoxes();
+msgContainer.classList.add("hide");
+}
+ 
+const draw=()=>{
+   msg.innerText = "It's a Draw!";
+   msgContainer.classList.remove("hide");
+   disableBoxes();
+};
+
+
  boxes.forEach((box) => {
     box.addEventListener("click", () =>{
         console.log("clcked");
@@ -23,14 +40,67 @@ let turn0 = true;
         box.innerText ="0";
         turn0=true;
        }
-       box.disabled=true;
+   box.disabled = true;
        checkWinner();
     });
  });
 
- const checkWinner = () =>{
-    for(let pattern of winningPatterns){
-        console.log(pattern);
-    }
+ const disableBoxes = ()=>{
+   for(let box of boxes){
+     box.disabled= true;
+   }
  };
+ const enableBoxes=()=>{
+   for(let box of boxes){
+      box.disabled = false;
+      box.innerText="";
+   }
+ };
+
+
+const showWinner =(winner)=>{
+   msg.innerText = `Congratulaion! Winner is ${winner}`;
+   msgContainer.classList.remove("hide");
+   disableBoxes();
+};
+
+
+
+
+
+
+
+ const checkWinner = () =>{
+   let isWinner = false;
+    for(let pattern of winningPatterns){
+      
+        let pos1= boxes[pattern[0]].innerText;
+      let pos2= boxes[pattern[1]].innerText;
+      let pos3= boxes[pattern[2]].innerText;
+
+      if(pos1 != "" && pos2 != "" && pos3 != ""){
+         if(pos1 === pos2  &&  pos2 === pos3){
+            console.log("Winner", pos2);
+            showWinner(pos1);
+         }
+      }
+
+    }
+    let  isDraw= true;
+      for(let box of boxes){
+         if(box.innerText === ""){
+            isDraw = false;
+            break;
+         }  
+      }
+
+      if(!isWinner && isDraw){   
+           draw();
+      
+      }  
+
+   };
+
+newbtn.addEventListener("click",reset);
+resetbtn.addEventListener("click",reset);
 
