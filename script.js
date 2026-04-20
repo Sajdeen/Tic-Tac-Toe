@@ -3,9 +3,11 @@ let resetbtn = document.querySelector(".reset");
 let newbtn = document.querySelector("#new");
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let modal = document.getElementById("drawModal");
+let closeBtn = document.getElementById("closeModal");
+let gameArea = document.querySelector(".game-area");
 
-
-let turn0 = true;
+let turnO = true;
  const winningPatterns = [[0,1,2],
                         [0,3,6],
                         [0,4,8],
@@ -18,27 +20,35 @@ let turn0 = true;
 ];
 
 const reset =()=>{
-   turn0=true;
+   turnO=true;
 enableBoxes();
+modal.classList.add("hide");
 msgContainer.classList.add("hide");
+   gameArea.classList.remove("hide-all"); 
+clearInterval(crackerInterval);
 }
  
 const draw=()=>{
-   msg.innerText = "It's a Draw!";
-   msgContainer.classList.remove("hide");
+ /*  msg.innerText = "It's a Draw!";*/
+   modal.classList.remove("hide");
+ console.log("DRAW TRIGGERED");
    disableBoxes();
 };
 
+closeBtn.addEventListener("click", () =>{
+modal.classList.add("hide");
+reset();
+});
 
  boxes.forEach((box) => {
     box.addEventListener("click", () =>{
         console.log("clcked");
-       if(turn0){
+       if(turnO){
         box.innerText="X";
-        turn0=false;
+        turnO=false;
        }else{
-        box.innerText ="0";
-        turn0=true;
+        box.innerText ="O";
+        turnO=true;
        }
    box.disabled = true;
        checkWinner();
@@ -58,13 +68,72 @@ const draw=()=>{
  };
 
 
-const showWinner =(winner)=>{
+/*const showWinner =(winner)=>{
    msg.innerText = `Congratulaion! Winner is ${winner}`;
    msgContainer.classList.remove("hide");
+gameArea.classList.ass("hide-all");
+showCrackers();
+   disableBoxes();
+};*/
+
+const showWinner =(winner)=>{
+   msg.innerText = `🎉 Congratulations! Winner is ${winner}`;
+   msgContainer.classList.remove("hide");
+
+   gameArea.classList.add("hide-all");   // ✅ FIXED
+
+   showCrackers();   // 🎆
+
    disableBoxes();
 };
 
+/*let crackerInterval;
+function showCrackers(){
+   for(let i = 0; i < 25; i++){
+      let cracker = document.createElement("div");
+      cracker.classList.add("cracker");
 
+      cracker.style.left = Math.random() * 100 + "vw";
+      cracker.style.top = Math.random() * 100 + "vh";
+
+      document.body.appendChild(cracker);  // ✅ FIXED
+
+      setTimeout(() => cracker.remove(), 1000);
+   }
+},200);*/
+
+let crackerInterval;
+
+function showCrackers(){
+
+   crackerInterval = setInterval(() => {
+
+      for(let i = 0; i < 25; i++){
+         let cracker = document.createElement("div");
+         cracker.classList.add("cracker");
+
+         cracker.style.left = Math.random() * 100 + "vw";
+         cracker.style.top = Math.random() * 100 + "vh";
+
+         document.body.appendChild(cracker);
+
+         setTimeout(() => cracker.remove(), 1000);
+      }
+
+   }, 200);   // ✅ correct place
+}
+
+/*function showCrackers(){
+   for(let i = 0; i<25; i++){
+      let cracker = document.createElement("div");
+      cracker.classList.add("cracker");
+      cracker.style.left = Math.random() * 100 +"vw";
+    cracker.style.top = Math.random() * 100 +"vw";
+   
+    document.body.apppendChild(cracker);
+    setTimeout(() => cracker.remove(), 1000);
+   }
+}*/
 
 
 
@@ -81,7 +150,9 @@ const showWinner =(winner)=>{
       if(pos1 != "" && pos2 != "" && pos3 != ""){
          if(pos1 === pos2  &&  pos2 === pos3){
             console.log("Winner", pos2);
+              isWinner = true;   // ✅ FIX
             showWinner(pos1);
+            return;
          }
       }
 
