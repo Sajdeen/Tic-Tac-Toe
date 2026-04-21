@@ -4,23 +4,23 @@
     box-sizing: border-box;
 }
 
-
 .container{
  min-height: 100vh;
-width: 100%;
-display: flex;
-flex-direction: column;
-background-color: rgb(165, 85, 199); 
+ width: 100%;
+ display: flex;
+ flex-direction: column;
 
+ background: url("https://images.pexels.com/photos/7130555/pexels-photo-7130555.jpeg") no-repeat center/cover;
 }
 h1{
-    font-size: 50px;
-    color: antiquewhite;
+    font-size: 10rem;
+    color: rgb(49, 15, 5);
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin-top:  2%; 
     user-select: none;
-    transition: 4s;
+    font-weight: bolder;
+
 }
 
 .game{
@@ -37,11 +37,11 @@ h1{
     align-items: center;
     border-radius: 35px;
     color: azure;
-    background-color: chocolate;
+    background-color: rgb(166, 196, 218);
     cursor: pointer;
     font-weight: bolder;
     font-size:25px;
-    border: 2px solid rgb(103, 88, 88);
+    border: 2px solid rgb(226, 145, 145);
     transition: all 0.3s ease; 
     user-select: none;
 }
@@ -51,11 +51,11 @@ h1{
     align-items: center;
     border-radius: 35px;
     color: azure;
-    background-color: rgb(30, 210, 147);
+    background-color: rgb(116, 155, 217);
     cursor: pointer;
     font-weight: bolder;
     font-size:25px;
-    border: 2px solid rgb(103, 88, 88);
+    border: 4px solid rgb(103, 88, 88);
     transition: all 0.3s ease; 
 }
 .box:active{
@@ -94,18 +94,20 @@ margin:  auto;
   height: 4rem;
   margin: 4cap;
     width: 12rem;
-    background-color:green ;
+    background-color:rgb(56, 37, 85) ;
     font-size: 25px;
     position: relative;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
    color: white;
    border-radius: 2px; 
-    border-radius: 20%;
+    border-radius: 25%;
 border: none;
 cursor: pointer;
+transition: 1s;
 }
 
-p{
+#msg{
     font-size: 50px;
     font-weight: bold;
     text-align: center;
@@ -147,16 +149,18 @@ p{
 }
 
 .modal-content{
-  background: white;
+  background: rgb(234, 172, 131);
   padding: 20px 30px;
   border-radius: 15px;
   text-align: center;
+  
 }
 
 .modal-content p{
   font-size: 24px;
   margin-bottom: 15px;
-  color: black;
+  color: rgb(29, 70, 116);
+  user-select: none;
 }
 
 .modal-content button{
