@@ -29,7 +29,6 @@ clearInterval(crackerInterval);
 }
  
 const draw=()=>{
- /*  msg.innerText = "It's a Draw!";*/
    modal.classList.remove("hide");
  console.log("DRAW TRIGGERED");
    disableBoxes();
@@ -68,39 +67,19 @@ reset();
  };
 
 
-/*const showWinner =(winner)=>{
-   msg.innerText = `Congratulaion! Winner is ${winner}`;
-   msgContainer.classList.remove("hide");
-gameArea.classList.ass("hide-all");
-showCrackers();
-   disableBoxes();
-};*/
+
 
 const showWinner =(winner)=>{
    msg.innerText = `🎉 Congratulations! Winner is ${winner}`;
    msgContainer.classList.remove("hide");
 
-   gameArea.classList.add("hide-all");   // ✅ FIXED
+   gameArea.classList.add("hide-all");   
 
-   showCrackers();   // 🎆
+   showCrackers();   
 
    disableBoxes();
 };
 
-/*let crackerInterval;
-function showCrackers(){
-   for(let i = 0; i < 25; i++){
-      let cracker = document.createElement("div");
-      cracker.classList.add("cracker");
-
-      cracker.style.left = Math.random() * 100 + "vw";
-      cracker.style.top = Math.random() * 100 + "vh";
-
-      document.body.appendChild(cracker);  // ✅ FIXED
-
-      setTimeout(() => cracker.remove(), 1000);
-   }
-},200);*/
 
 let crackerInterval;
 
@@ -122,19 +101,6 @@ function showCrackers(){
 
    }, 200);   // ✅ correct place
 }
-
-/*function showCrackers(){
-   for(let i = 0; i<25; i++){
-      let cracker = document.createElement("div");
-      cracker.classList.add("cracker");
-      cracker.style.left = Math.random() * 100 +"vw";
-    cracker.style.top = Math.random() * 100 +"vw";
-   
-    document.body.apppendChild(cracker);
-    setTimeout(() => cracker.remove(), 1000);
-   }
-}*/
-
 
 
 

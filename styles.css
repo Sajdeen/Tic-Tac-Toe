@@ -9,20 +9,40 @@
  width: 100%;
  display: flex;
  flex-direction: column;
-
- background: url("https://images.pexels.com/photos/7130555/pexels-photo-7130555.jpeg") no-repeat center/cover;
+    justify-content: center;    
+    align-items: center;    
+ background: linear-gradient(270deg, #000000, #1a0033, #0a0a2a)
 }
 h1{
-    font-size: 10rem;
-    color: rgb(49, 15, 5);
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    margin-top:  2%; 
+    margin-top:  5%; 
     user-select: none;
     font-weight: bolder;
 
 }
-
+.green{
+  color: #00f0ff;
+  text-shadow: 0 0 10px #00f0ff;
+}
+.white{
+  color:white;
+}
+.pink{
+  color:#ff00c8;
+  text-shadow: 0 0 10px #ff00c8;
+}
+.x{
+  color: #00f0ff;
+  text-shadow:0 0 10px #00f0ff ;
+  text-align: center;
+}
+.y{
+  color:#ff00c8;
+  text-shadow: 0 0 10px #ff00c8;
+   text-align: center;
+   margin: auto;
+}
 .game{
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -36,13 +56,15 @@ h1{
     width: 7rem;
     align-items: center;
     border-radius: 35px;
-    color: azure;
-    background-color: rgb(166, 196, 218);
+    color: rgb(83, 227, 227);
+    text-shadow: #d3308f;
+    background:transparent;
     cursor: pointer;
     font-weight: bolder;
     font-size:25px;
-    border: 2px solid rgb(226, 145, 145);
     transition: all 0.3s ease; 
+  border: 4px solid #00f0ff;;
+  box-shadow: 0 0 10px #ff00c8;
     user-select: none;
 }
 .box:hover{
@@ -50,18 +72,14 @@ h1{
     width: 7rem;
     align-items: center;
     border-radius: 35px;
-    color: azure;
-    background-color: rgb(116, 155, 217);
+    border: 4px solid #e82db6;;
+  box-shadow: 0 0 10px #0ce1e5;
     cursor: pointer;
     font-weight: bolder;
     font-size:25px;
-    border: 4px solid rgb(103, 88, 88);
     transition: all 0.3s ease; 
 }
-.box:active{
-    transform: scale(0.9);
-      background-color: #444;
-}
+
 .btn-cont{
     display: flex;
     align-items: center;
@@ -70,19 +88,19 @@ h1{
 .reset{
     height: 4rem;
     width: 12rem;
-    background-color:green ;
+    background:transparent;
     position: relative;
    top:5rem;
-   font-size: 25px;
+   font-size: 35px;
    border-radius: 20px;
-  font-size: 25px;
-    margin: auto;
-color: azure;
-user-select: none;
-border: none;
-
+   font-family: 'Times New Roman', Times, serif;
+      margin: auto;
+  color: #00f0ff;
+  text-shadow: #ff00c8;
+    user-select: none;
+    border: 4px solid #d3308f;;
+  box-shadow: 0 0 10px #ff00c8;
 }
-
 .msg-container{
 text-align: center;
 justify-content: center;
@@ -94,17 +112,26 @@ margin:  auto;
   height: 4rem;
   margin: 4cap;
     width: 12rem;
-    background-color:rgb(56, 37, 85) ;
+    background:transparent ;
     font-size: 25px;
     position: relative;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
-   color: white;
-   border-radius: 2px; 
-    border-radius: 25%;
-border: none;
+    border-radius:25%;
 cursor: pointer;
 transition: 1s;
+
+  color: #00f0ff;
+  text-shadow: #ff00c8;
+    user-select: none;
+    border: 4px solid #ff00c8;
+  box-shadow: 0 0 10px #ff00c8;
+}
+#new:hover{
+  border: 4px solid #d0318e;
+  box-shadow: #0da5cb;
+  transition: all 2s ease;
+  translate: 28%;
 }
 
 #msg{
@@ -149,27 +176,38 @@ transition: 1s;
 }
 
 .modal-content{
-  background: rgb(234, 172, 131);
+  background:#000d21;
   padding: 20px 30px;
   border-radius: 15px;
   text-align: center;
+color: #00f0ff;
+  text-shadow: #ff00c8;
+    user-select: none;
+    border: 4px solid #d3308f;;
+  box-shadow: 0 0 10px #ff00c8;
   
 }
 
 .modal-content p{
-  font-size: 24px;
+  font-size: 35px;
   margin-bottom: 15px;
-  color: rgb(29, 70, 116);
+  color: #d3308f;
+  text-shadow: #ab1182;
   user-select: none;
+  font-weight: bold;
 }
 
 .modal-content button{
   padding: 10px 20px;
-  border: none;
-  background: green;
-  color: white;
+  background:skyblue;
+  color: rgb(178, 8, 96);
+  text-shadow: #d0318e;
+  box-shadow: #0776d8;
+  border: 2px solid #5d0953;
   border-radius: 10px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .hide{
