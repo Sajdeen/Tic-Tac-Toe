@@ -189,10 +189,10 @@ color: #00f0ff;
 }
 
 .modal-content p{
-  font-size: 35px;
+  font-size: 24px;
   margin-bottom: 15px;
   color: #d3308f;
-  text-shadow: #ab1182;
+  text-shadow: #30d3ba;
   user-select: none;
   font-weight: bold;
 }
