@@ -67,8 +67,6 @@ reset();
  };
 
 
-
-
 const showWinner =(winner)=>{
    msg.innerText = `🎉 Congratulations! Winner is ${winner}`;
    msgContainer.classList.remove("hide");
@@ -99,11 +97,8 @@ function showCrackers(){
          setTimeout(() => cracker.remove(), 1000);
       }
 
-   }, 200);   // ✅ correct place
+   }, 200);   
 }
-
-
-
 
  const checkWinner = () =>{
    let isWinner = false;
@@ -116,7 +111,7 @@ function showCrackers(){
       if(pos1 != "" && pos2 != "" && pos3 != ""){
          if(pos1 === pos2  &&  pos2 === pos3){
             console.log("Winner", pos2);
-              isWinner = true;   // ✅ FIX
+              isWinner = true;  
             showWinner(pos1);
             return;
          }
