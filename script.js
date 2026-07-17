@@ -6,6 +6,25 @@ let msg = document.querySelector("#msg");
 let modal = document.getElementById("drawModal");
 let closeBtn = document.getElementById("closeModal");
 let gameArea = document.querySelector(".game-area");
+const playermodal = document.querySelector("#playerModal");
+const gameContainer = document.querySelector(".game-container");
+const startBtn = document.querySelector("#startBtn");
+let playerX = 0;
+let playerO = 0;
+
+startBtn.addEventListener("click",()=>{
+
+   playerX = document.getElementById("playerX").value;
+   playerO = document.getElementById("playerO").value;   
+})
+
+
+
+
+
+
+
+
 
 let turnO = true;
  const winningPatterns = [[0,1,2],
@@ -16,8 +35,7 @@ let turnO = true;
                         [2,4,6],
                         [3,4,5],
                         [6,7,8]
-                
-];
+                     ];
 
 const reset =()=>{
    turnO=true;
