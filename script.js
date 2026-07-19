@@ -7,15 +7,23 @@ let modal = document.getElementById("drawModal");
 let closeBtn = document.getElementById("closeModal");
 let gameArea = document.querySelector(".game-area");
 const playermodal = document.querySelector("#playerModal");
-const gameContainer = document.querySelector(".game-container");
+const gameContainer = document.querySelector("#game-container");
 const startBtn = document.querySelector("#startBtn");
-let playerX = 0;
-let playerO = 0;
+let playerX = "";
+let playerO = "";
 
 startBtn.addEventListener("click",()=>{
+console.log("start button clicked"); 
+   playerX = document.getElementById("player1").value.trim();
+   playerO = document.getElementById("player2").value.trim();  
+   
+   if (playerX ===""||playerO ===""){
+      alert("Please enter player names");
+      return;
+   }
+   playermodal.classList.add("hide");
+   gameContainer.classList.remove("hide");
 
-   playerX = document.getElementById("playerX").value;
-   playerO = document.getElementById("playerO").value;   
 })
 
 
@@ -130,7 +138,12 @@ function showCrackers(){
          if(pos1 === pos2  &&  pos2 === pos3){
             console.log("Winner", pos2);
               isWinner = true;  
-            showWinner(pos1);
+              if (pos1 === "X") {
+               showWinner(playerX);
+               } else {
+              showWinner(playerO);
+}
+            // showWinner(pos1);
             return;
          }
       }
@@ -153,4 +166,3 @@ function showCrackers(){
 
 newbtn.addEventListener("click",reset);
 resetbtn.addEventListener("click",reset);
-
