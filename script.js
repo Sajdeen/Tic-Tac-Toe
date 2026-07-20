@@ -29,11 +29,6 @@ console.log("start button clicked");
 
 
 
-
-
-
-
-
 let turnO = true;
  const winningPatterns = [[0,1,2],
                         [0,3,6],

@@ -246,10 +246,10 @@ form label{
   font-size: 20px;
   text-align: left;
 }
-.input{
+form input{
     width:100%;
     padding:14px 16px;
-   
+   height: 50px;
     border-radius:12px;
     background:#071a35;
     color:#fff;
@@ -260,4 +260,38 @@ form label{
 }
 .form input:hover{
     box-shadow:0 0 10px #00f0ff;
+}
+.modal-content{
+ min-height:500px;
+  width: 400px;
+  padding: 35px;
+    border-radius: 18px;
+}
+.form label{
+    color:#00f0ff;
+    font-size:20px;
+    font-weight:bold;
+    text-align:left;
+}
+
+.form input{
+    width:100%;
+    height:55px;
+    padding:0 15px;
+    border-radius:12px;
+    background:#071a35;
+    color:white;
+    font-size:17px;
+    border:2px solid #00f0ff;
+    outline:none;
+    transition:.3s;
+}
+#startBtn{
+    width:100%;
+    height:55px;
+    font-size:32px;
+    margin-top:20px;
+    border:4px solid #610a42;
+    border-radius:12px;
+    padding:0 15px;
 }
