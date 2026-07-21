@@ -175,7 +175,7 @@ transition: 1s;
   z-index: 1000;
 }
 
-.modal-content{
+.draw-modal{
   background:#000d21;
   padding: 20px 30px;
   border-radius: 15px;
@@ -188,7 +188,7 @@ color: #00f0ff;
   
 }
 
-.modal-content p{
+.draw-modal p{
   font-size: 24px;
   margin-bottom: 15px;
   color: #d3308f;
@@ -197,7 +197,7 @@ color: #00f0ff;
   font-weight: bold;
 }
 
-.modal-content button{
+.draw-modal button{
   padding: 10px 20px;
   background:skyblue;
   color: rgb(178, 8, 96);
@@ -239,33 +239,44 @@ color: #00f0ff;
 margin-top: 25px;
 
 }
-form label{
+
+.modal-content{
+ min-height:500px;
+  width: 400px;
+  padding: 35px;
+    border-radius: 18px;
+      background:#000d21;
+  padding: 20px 30px;
+  border-radius: 15px;
+  text-align: center;
+color: #00f0ff;
+  text-shadow: #ff00c8;
+    user-select: none;
+    border: 4px solid #d3308f;;
+  box-shadow: 0 0 10px #ff00c8;
+}
+.form label{
   color: #00f0ff;
   /* text-shadow: 0 0 10px #00f0ff; */
   font-weight: bold;
   font-size: 20px;
   text-align: left;
 }
-form input{
+.form input{
     width:100%;
-    padding:14px 16px;
-   height: 50px;
+    padding:0px 16px;
+   height: 55px;
+   border: 2px solid skyblue;
     border-radius:12px;
     background:#071a35;
     color:#fff;
     font-size:16px;
    outline:none;
-    transition:0.3s ease;
+    transition:.3s;
 
 }
 .form input:hover{
     box-shadow:0 0 10px #00f0ff;
-}
-.modal-content{
- min-height:500px;
-  width: 400px;
-  padding: 35px;
-    border-radius: 18px;
 }
 .form label{
     color:#00f0ff;
@@ -273,25 +284,27 @@ form input{
     font-weight:bold;
     text-align:left;
 }
-
-.form input{
-    width:100%;
-    height:55px;
-    padding:0 15px;
-    border-radius:12px;
-    background:#071a35;
-    color:white;
-    font-size:17px;
-    border:2px solid #00f0ff;
-    outline:none;
-    transition:.3s;
-}
 #startBtn{
     width:100%;
     height:55px;
     font-size:32px;
     margin-top:20px;
-    border:4px solid #610a42;
-    border-radius:12px;
-    padding:0 15px;
+     padding: 10px 20px;
+  background:skyblue;
+  color: rgb(178, 8, 96);
+  text-shadow: #d0318e;
+  box-shadow: #930478;
+  border: 2px solid #5d0953;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 25px;
+transition: 0.3s ease;
+font-family: 'Times New Roman', Times, serif;
+
+}
+#startBtn:hover{
+  box-shadow:2px 5px #ff00c8;
+  color: rgb(44, 1, 41);
+
 }
