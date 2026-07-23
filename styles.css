@@ -7,7 +7,9 @@ body{
   background:url("https://img.magnific.com/free-vector/digital-videogame-controller-techno-background-with-light-effect_1017-54785.jpg?semt=ais_hybrid&w=740&q=80");
   background-size: cover;
   background-repeat: no-repeat;
- 
+  background-position: fixed;
+ height: 100vh;
+  width: 100%;
 
 }
 .container{
@@ -249,7 +251,7 @@ margin-top: 25px;
 }
 
 .modal-content{
- min-height:500px;
+ min-height:;
   width: 400px;
   padding: 35px;
     border-radius: 18px;
