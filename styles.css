@@ -3,15 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+  background:url("https://img.magnific.com/free-vector/digital-videogame-controller-techno-background-with-light-effect_1017-54785.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
 
+}
 .container{
  min-height: 100vh;
  width: 100%;
  display: flex;
  flex-direction: column;
-    justify-content: center;    
-    align-items: center;    
- background: linear-gradient(270deg, #000000, #1a0033, #0a0a2a)
+ justify-content: center;    
+  align-items: center;    
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTciWDdjdKjp-toSmcIxug-dMPDfc164JYF4SuSb9IUeg&s=10);
+ background-size: cover;
+ background-repeat: no-repeat;
 }
 h1{
     font-family: 'Times New Roman', Times, serif;
@@ -252,7 +260,7 @@ margin-top: 25px;
 color: #00f0ff;
   text-shadow: #ff00c8;
     user-select: none;
-    border: 4px solid #d3308f;;
+    border: 2px solid #d3308f;;
   box-shadow: 0 0 10px #ff00c8;
 }
 .form label{
